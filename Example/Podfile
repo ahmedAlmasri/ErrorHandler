@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ErrorHandler_Example' do
+  pod 'ErrorHandler', :path => '../'
+
+  target 'ErrorHandler_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
