@@ -1,15 +1,14 @@
 {
   "name": "ErrorHandler",
   "version": "0.1.0",
-  "summary": "A short description of ErrorHandler.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "Flexible error handling for Swift and RxSwift",
   "homepage": "https://github.com/ahmedAlmasri/ErrorHandler",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Ahmad Almasri": "aalmasri@winfooz.com"
+    "Ahmad Almasri": "ahmed.almasri@ymail.com"
   },
   "source": {
     "git": "https://github.com/ahmedAlmasri/ErrorHandler.git",
@@ -48,7 +47,7 @@
       "platforms": {
         "ios": "12.0"
       },
-      "source_files": "ImageSlideshow/Classes/Rx/**/*"
+      "source_files": "ErrorHandler/Classes/Rx/**/*"
     }
   ],
   "swift_version": "5.2"

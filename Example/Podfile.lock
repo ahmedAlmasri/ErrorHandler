@@ -36,7 +36,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ErrorHandler: 72a05533acf27d31b329f12d52222c1e67b7b42f
+  ErrorHandler: 70252abbba4c03e4cb062f0815f99131b9fbd8fd
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9

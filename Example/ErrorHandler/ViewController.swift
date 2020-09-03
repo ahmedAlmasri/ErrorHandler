@@ -27,7 +27,7 @@ class TestErrorMapper: ErrorMappable {
 	}
 	
 }
-var errorHander: ErrorHandler  = {
+var globalErrorHander: ErrorHandler  = {
 	
 	ErrorHandler().catch(value: AuthError.password) { __ in
 		
@@ -44,23 +44,24 @@ var errorHander: ErrorHandler  = {
 
 class ViewController: UIViewController {
 	
-	let errorTracker = RxErrorTracker(errorMapper: TestErrorMapper())
-	let disposeBag = DisposeBag()
-	let errorTracker2 = ErrorTracker(errorMapper: TestErrorMapper())
-	var errorHander2: ErrorHandler!
+	let rxErrorTracker = RxErrorTracker(errorMapper: TestErrorMapper())
+	let errorTracker = ErrorTracker(errorMapper: TestErrorMapper())
+	var errorHander: ErrorHandler!
 	
+	let disposeBag = DisposeBag()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-//		testObs().trackError(errorTracker).subscribe(onNext: { _ in
-//			print("Success")
-//		}).disposed(by: disposeBag)
-//
-//		errorTracker.asDriver().drive(binError()).disposed(by: disposeBag)
-//		self.errorHander2 = errorHander.catch(value: AuthError.none) { _ in
-//
-//			print("None error")
-//		}
+		testObs().trackError(rxErrorTracker).subscribe(onNext: { _ in
+			print("Success")
+		}).disposed(by: disposeBag)
+
+		rxErrorTracker.asDriver().drive(binError()).disposed(by: disposeBag)
+		self.errorHander = globalErrorHander.catch(value: AuthError.none) { _ in
+
+			print("None error")
+		}
 	}
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -71,7 +72,7 @@ class ViewController: UIViewController {
 		
 		Binder<Error>.init(self) { (_, error) in
 			
-			self.errorHander2.throw(error)
+			self.errorHander.throw(error)
 		}
 	}
 	func testObs() -> Observable<Void> {
