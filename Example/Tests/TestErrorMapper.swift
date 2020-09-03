@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import ErrorHandler
+@testable import SNErrorHandler
 
 enum TestError: Error {
 	case invalid

@@ -1,8 +1,8 @@
 use_frameworks!
 
 target 'ErrorHandler_Example' do
-  pod 'ErrorHandler', :path => '../'
-  pod 'ErrorHandler/Rx', :path => '../'
+  pod 'SNErrorHandler', :path => '../'
+  pod 'SNErrorHandler/Rx', :path => '../'
 
   target 'ErrorHandler_Tests' do
     inherit! :search_paths

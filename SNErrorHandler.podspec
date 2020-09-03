@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'ErrorHandler'
+  s.name             = 'SNErrorHandler'
   s.version          = '0.1.0'
   s.summary          = 'Flexible error handling for Swift and RxSwift'
   s.homepage         = 'https://github.com/ahmedAlmasri/ErrorHandler'
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     core.source_files = 'ErrorHandler/Classes/Core/**/*'
   end
 	s.subspec 'Rx' do |subspec|
-    subspec.dependency 'ErrorHandler/Core'
+    subspec.dependency 'SNErrorHandler/Core'
 	  subspec.dependency "RxCocoa"
 	  subspec.dependency "RxSwift"
     subspec.platform     = :ios, '12.0'

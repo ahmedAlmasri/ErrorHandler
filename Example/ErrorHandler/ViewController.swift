@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ErrorHandler
+import SNErrorHandler
 import RxSwift
 import RxCocoa
 

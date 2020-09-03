@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ErrorHandler
+@testable import SNErrorHandler
 
 class ErrorTrackerTests: XCTestCase {
 	
