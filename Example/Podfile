@@ -2,10 +2,12 @@ use_frameworks!
 
 target 'ErrorHandler_Example' do
   pod 'ErrorHandler', :path => '../'
+  pod 'ErrorHandler/Rx', :path => '../'
 
   target 'ErrorHandler_Tests' do
     inherit! :search_paths
-
+		pod 'RxBlocking'
+		pod 'RxTest'
     
   end
 end
