@@ -100,6 +100,17 @@ For RxSwift
 ```ruby
 pod 'SNErrorHandler/Rx'
 ```
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+
+To integrate `SNErrorHandler` into your Xcode project using Xcode 11 or newer, specify it in `File > Swift Packages > Add`:
+
+```
+https://github.com/ahmedAlmasri/ErrorHandler.git
+```
+
 ## Author
 
 Ahmad Almasri, ahmed.almasri@ymail.com
