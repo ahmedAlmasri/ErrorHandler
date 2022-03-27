@@ -10,7 +10,7 @@ import XCTest
 import RxSwift
 import RxBlocking
 import RxTest
-@testable import SNErrorHandler
+@testable import RXSNErrorHandler
 
 class RxErrorTrackerTests: XCTestCase {
 	let disposeBag = DisposeBag()

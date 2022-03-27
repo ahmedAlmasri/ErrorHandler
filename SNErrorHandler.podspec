@@ -17,14 +17,14 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
   s.swift_versions = ['4.0', '4.1', '4.2', '5', '5.1', '5.2']
   s.subspec 'Core' do |core|
-    core.source_files = 'ErrorHandler/Classes/Core/**/*'
+    core.source_files = 'ErrorHandler/Core/**/*'
   end
 	s.subspec 'Rx' do |subspec|
     subspec.dependency 'SNErrorHandler/Core'
 	  subspec.dependency "RxCocoa"
 	  subspec.dependency "RxSwift"
     subspec.platform     = :ios, '12.0'
-    subspec.source_files = 'ErrorHandler/Classes/Rx/**/*'
+    subspec.source_files = 'ErrorHandler/Rx/**/*'
   end
   s.default_subspec = 'Core'
 end

@@ -8,6 +8,9 @@
 import Foundation
 import RxCocoa
 import RxSwift
+#if SWIFT_PACKAGE
+import SNErrorHandler
+#endif
 
 public final class RxErrorTracker<T: ErrorMappable>: SharedSequenceConvertibleType {
 	public typealias SharingStrategy = DriverSharingStrategy
